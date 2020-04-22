@@ -1,11 +1,10 @@
 var csd = require("./createStatementData.js");
 
 function statement(invoice) {
-    return renderHtml(csd.createStatementData(invoice));
+    return renderPlainText(csd.createStatementData(invoice));
 }
 
 // html
-
 function renderHtml(data){
     let result = `<h1>Statement for ${data.customer}</h1>\n`;
     result += `<table>`;
